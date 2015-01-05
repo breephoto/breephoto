@@ -1,0 +1,78 @@
+main {
+	height: 100vh;
+	background: radial-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.85)), url('/images/bg.jpg') no-repeat;
+	background-size: cover;
+	position: relative;
+
+	> div {
+		padding: 10px;
+	}
+
+	.logo {
+		text-align: center;
+		font: 8vw $title-font-family;
+		color: #fff;
+		@include respond($desktop-breakpoint) {
+			transform: translateY(10vh);
+			transition: all 0.3s ease;
+		}
+	}
+
+	section.photos {
+		text-align: center;
+		@include respond($desktop-breakpoint) {
+			height: 40vh;
+			transform: translateY(-5vh);
+			opacity: 0;
+			transition: all 0.3s ease;
+		}
+	}
+
+	nav {
+		text-align: center;
+		@include respond($desktop-breakpoint) {
+			transform: translateY(-30vh);
+			transition: all 0.3s ease;
+		}
+	}
+
+	button {
+		display: block;
+		width: 100%;
+		margin-bottom: 10px;
+
+		@include respond($desktop-breakpoint) {
+			margin-right: 10px;
+			margin-left: 10px;
+			margin-bottom: 0;
+			display: inline-block;
+			width: auto;
+		}
+	}
+
+	&.show-photos {
+
+		.logo {
+			transform: translateY(0);
+			transition: all 0.3s ease;
+			transition-delay: 0.1s;
+		}
+
+		.photos {
+			transform: translateY(0);
+			opacity: 1;
+			transition: all 0.7s ease;
+			transition-delay: 0.2s;
+
+		}
+
+		nav {
+			transform: translateY(0);
+			transition: all 0.3s ease;
+		}
+
+	}
+	
+}
+
+
