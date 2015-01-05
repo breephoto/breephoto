@@ -30,9 +30,11 @@ main {
 
 	nav {
 		text-align: center;
+		display: none;
 		@include respond($desktop-breakpoint) {
 			transform: translateY(-30vh);
 			transition: all 0.3s ease;
+			display: block;
 		}
 	}
 
@@ -50,27 +52,29 @@ main {
 		}
 	}
 
-	&.show-photos {
+	@include respond($desktop-breakpoint) {
+		&.show-photos {
 
-		.logo {
-			transform: translateY(0);
-			transition: all 0.3s ease;
-			transition-delay: 0.1s;
+			.logo {
+				transform: translateY(0);
+				transition: all 0.3s ease;
+				transition-delay: 0.1s;
+			}
+
+			section.photos {
+				transform: translateY(0);
+				opacity: 1;
+				transition: all 0.7s ease;
+				transition-delay: 0.2s;
+
+			}
+
+			nav {
+				transform: translateY(0);
+				transition: all 0.3s ease;
+			}
+
 		}
-
-		section.photos {
-			transform: translateY(0);
-			opacity: 1;
-			transition: all 0.7s ease;
-			transition-delay: 0.2s;
-
-		}
-
-		nav {
-			transform: translateY(0);
-			transition: all 0.3s ease;
-		}
-
 	}
 	
 }

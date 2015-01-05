@@ -392,13 +392,15 @@ main {
         opacity: 0;
         transition: all 0.3s ease; } }
   main nav {
-    text-align: center; }
+    text-align: center;
+    display: none; }
     @media screen and (min-width: 800px) {
       main nav {
         -webkit-transform: translateY(-30vh);
             -ms-transform: translateY(-30vh);
                 transform: translateY(-30vh);
-        transition: all 0.3s ease; } }
+        transition: all 0.3s ease;
+        display: block; } }
   main button {
     display: block;
     width: 100%;
@@ -410,24 +412,26 @@ main {
         margin-bottom: 0;
         display: inline-block;
         width: auto; } }
-  main.show-photos .logo {
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
-    transition: all 0.3s ease;
-    transition-delay: 0.1s; }
-  main.show-photos section.photos {
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
-    opacity: 1;
-    transition: all 0.7s ease;
-    transition-delay: 0.2s; }
-  main.show-photos nav {
-    -webkit-transform: translateY(0);
-        -ms-transform: translateY(0);
-            transform: translateY(0);
-    transition: all 0.3s ease; }
+  @media screen and (min-width: 800px) {
+    main.show-photos .logo {
+      -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+              transform: translateY(0);
+      transition: all 0.3s ease;
+      transition-delay: 0.1s; }
+    main.show-photos section.photos {
+      -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+      transition: all 0.7s ease;
+      transition-delay: 0.2s; }
+    main.show-photos nav {
+      -webkit-transform: translateY(0);
+          -ms-transform: translateY(0);
+              transform: translateY(0);
+      transition: all 0.3s ease; }
+ }
 
 section.about, section.contact {
   min-height: 100vh;
