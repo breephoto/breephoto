@@ -416,7 +416,7 @@ main {
             transform: translateY(0);
     transition: all 0.3s ease;
     transition-delay: 0.1s; }
-  main.show-photos .photos {
+  main.show-photos section.photos {
     -webkit-transform: translateY(0);
         -ms-transform: translateY(0);
             transform: translateY(0);
@@ -504,22 +504,25 @@ section.about, section.contact {
   to {
     -webkit-transform: rotate(-4deg); } }
 
-section.about > div {
-  margin: 20px; }
-section.about .photo {
-  background-color: #fff;
-  width: 80%;
-  padding: 10px 10px 0 10px;
-  box-shadow: 0 0 20px -5px #000;
-  font: 16pt "Nothing You Could Do", cursive;
-  color: #620C0C;
-  -webkit-animation: rock 10s ease-in-out infinite alternate;
-          animation: rock 10s ease-in-out infinite alternate; }
-  section.about .photo::before {
-    display: block;
-    background: url('/images/bree.jpg');
-    background-size: cover;
-    content: '';
-    height: 30vh;
-    min-height: 150px;
-    width: 100%; }
+section.about {
+  padding: 20px; }
+  section.about .photo {
+    margin: 10px auto;
+    width: 80%;
+    padding: 10px 10px 0 10px;
+    background-color: #fff;
+    box-shadow: 0 0 20px -5px #000;
+    font: 16pt "Nothing You Could Do", cursive;
+    color: #620C0C; }
+    @media screen and (min-width: 800px) {
+      section.about .photo {
+        -webkit-animation: rock 10s ease-in-out infinite alternate;
+                animation: rock 10s ease-in-out infinite alternate; } }
+    section.about .photo::before {
+      display: block;
+      background: url('/images/bree.jpg');
+      background-size: cover;
+      content: '';
+      height: 30vh;
+      min-height: 150px;
+      width: 100%; }
