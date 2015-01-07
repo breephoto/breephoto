@@ -444,8 +444,8 @@ section.about, section.contact {
   section.about {
     position: absolute;
     top: 0;
-    left: -25%;
-    width: 25%;
+    left: -30%;
+    width: 30%;
     -webkit-transform: translateX(0px);
         -ms-transform: translateX(0px);
             transform: translateX(0px);
@@ -455,7 +455,7 @@ section.about, section.contact {
     position: absolute;
     top: 0;
     left: 100vw;
-    width: 25%;
+    width: 30%;
     -webkit-transform: translateX(0px);
         -ms-transform: translateX(0px);
             transform: translateX(0px);

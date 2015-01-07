@@ -6,7 +6,7 @@ section.about, section.contact {
 	box-shadow: 0 0 40px 0 #000;
 }
 
-$section-slide: 25%;
+$section-slide: 30%;
 $main-slide: 8%;
 
 @include respond($desktop-breakpoint) {
