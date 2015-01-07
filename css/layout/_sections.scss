@@ -6,8 +6,8 @@ section.about, section.contact {
 	box-shadow: 0 0 40px 0 #000;
 }
 
-$section-slide: 30vw;
-$main-slide: 10vw;
+$section-slide: 25%;
+$main-slide: 8%;
 
 @include respond($desktop-breakpoint) {
 
@@ -30,7 +30,7 @@ $main-slide: 10vw;
 	}
 
 	body {
-		width: 100vw;
+		width: 100%;
 		overflow: hidden;
 
 		main {
@@ -44,7 +44,7 @@ $main-slide: 10vw;
 			}
 
 			section.about {
-				transform: translateX($section-slide);		
+				transform: translateX(100%);		
 				transition: all 0.3s ease;
 			}
 			
@@ -57,7 +57,7 @@ $main-slide: 10vw;
 			}
 
 			section.contact {
-				transform: translateX(-$section-slide);		
+				transform: translateX(-100%);		
 				transition: all 0.3s ease;
 			}
 			
