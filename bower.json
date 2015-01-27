@@ -15,6 +15,7 @@
   "dependencies": {
     "jquery": "~2.1.3",
     "instafeed": "git://github.com/stevenschobert/instafeed.js.git",
+    "simplyScroll": "git://github.com/logicbox/jquery-simplyscroll.git",
     "normalize.css": "~3.0.2"
   }
 }

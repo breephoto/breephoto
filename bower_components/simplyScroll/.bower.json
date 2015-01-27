@@ -1,0 +1,14 @@
+{
+  "name": "simplyScroll",
+  "homepage": "https://github.com/logicbox/jquery-simplyscroll",
+  "version": "2.0.5",
+  "_release": "2.0.5",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.0.5",
+    "commit": "b974b83e68def2926aab00dd40e9a8c22fae6e24"
+  },
+  "_source": "git://github.com/logicbox/jquery-simplyscroll.git",
+  "_target": "*",
+  "_originalSource": "git://github.com/logicbox/jquery-simplyscroll.git"
+}

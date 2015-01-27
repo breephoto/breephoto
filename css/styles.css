@@ -338,14 +338,14 @@ body {
   background-color: #000; }
 
 button {
+  padding: 5px 15px;
+  display: inline-block;
   background-color: transparent;
   border: none;
   cursor: pointer;
   font-size: 10pt;
   border-radius: 4px;
-  padding: 5px 15px;
   outline: 0;
-  display: inline-block;
   border: 1px solid rgba(255, 255, 255, 0.7);
   background-color: rgba(0, 0, 0, 0.15);
   border-radius: 50px;
@@ -369,8 +369,6 @@ main {
   background: radial-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.85)), url('/images/bg.jpg') no-repeat;
   background-size: cover;
   position: relative; }
-  main > div {
-    padding: 10px; }
   main .logo {
     text-align: center;
     font: 8vw "Alex Brush";
@@ -432,6 +430,17 @@ main {
               transform: translateY(0);
       transition: all 0.3s ease; }
  }
+
+#instafeed {
+  overflow: hidden; }
+  #instafeed a {
+    display: block;
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    margin-right: 20px;
+    border-radius: 10px; }
 
 section.about, section.contact {
   min-height: 100vh;
@@ -530,3 +539,33 @@ section.about {
       height: 30vh;
       min-height: 150px;
       width: 100%; }
+
+.simply-scroll-container {
+  position: relative; }
+
+/* Clip DIV - automatically generated */
+.simply-scroll-clip {
+  position: relative;
+  overflow: hidden; }
+
+/* UL/OL/DIV - the element that simplyScroll is inited on
+Class name automatically added to element */
+.simply-scroll-list {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* Custom class modifications - adds to / overrides above
+
+.simply-scroll is default base class */
+/* Container DIV */
+.simply-scroll {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1em; }
+
+/* Clip DIV */
+.simply-scroll .simply-scroll-clip {
+  width: 100%;
+  height: 200px; }

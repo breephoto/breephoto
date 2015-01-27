@@ -1,24 +1,29 @@
 $(function() {
 
-  // var feed = new Instafeed({
-  //   get: 'user',
-  //   userId: 1628553189,
-  //   accessToken: '1628553189.5a10ffa.3a96a717093640f38f7c341853520693',
-  //   resolution: 'low_resolution',
-  //   after: function() {
+  var feed = new Instafeed({
+    get: 'user',
+    userId: 346969893,
+    accessToken: '346969893.5a10ffa.66a80f9eb7fa4f03b3841e5e0bffd923',
+    resolution: 'low_resolution',
+    sortBy: 'most-recent',
+    template: '<a href="{{link}}" style="background-image: url({{image}})"></a>',
+    filter: function(image) {
+      return true;
+      //return image.tags.indexOf('wedding') >= 0;
+    },
+    after: function() {
      
-  //     // $("#instagram_list").simplyScroll({
-  //     //   speed: 1,
-  //     //   frameRate: 20,
-  //     //   orientation: 'horizontal',
-  //     //   direction: 'forwards',
-  //     //   customClass: 'instagram_scroller'
-  //     // });
+      $("#instafeed").simplyScroll({
+        speed: 1,
+        frameRate: 20,
+        orientation: 'horizontal',
+        direction: 'forwards'
+      });
 
-  //   }
-  // });
+    }
+  });
 
-  // feed.run();
+  feed.run();
 
 
   //$('.banner').unslider();
