@@ -66,7 +66,6 @@ main {
 				opacity: 1;
 				transition: all 0.7s ease;
 				transition-delay: 0.2s;
-
 			}
 
 			nav {
@@ -80,15 +79,3 @@ main {
 }
 
 
-#instafeed {
-	overflow: hidden;
-	a {
-		display: block;
-		float: left;
-		width: 200px;
-		height: 200px;
-		background-size: cover;
-		margin-right: 20px;
-		border-radius: 10px;
-	}
-}

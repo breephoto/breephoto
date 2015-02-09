@@ -8,8 +8,7 @@ $(function() {
     sortBy: 'most-recent',
     template: '<a href="{{link}}" style="background-image: url({{image}})"></a>',
     filter: function(image) {
-      return true;
-      //return image.tags.indexOf('wedding') >= 0;
+      return image.tags.indexOf('website') >= 0;
     },
     after: function() {
      
@@ -25,9 +24,6 @@ $(function() {
 
   feed.run();
 
-
-  //$('.banner').unslider();
-
   var reset = function() {
     $('body').attr('data-page', '');
   }
@@ -42,5 +38,4 @@ $(function() {
     reset();
   });
   
-
 });
