@@ -362,73 +362,6 @@ button {
     background-color: rgba(255, 255, 255, 0.15); }
 
 /**
- * Components
- */
-.simply-scroll-container {
-  position: relative; }
-
-/* Clip DIV - automatically generated */
-.simply-scroll-clip {
-  position: relative;
-  overflow: hidden; }
-
-/* UL/OL/DIV - the element that simplyScroll is inited on
-Class name automatically added to element */
-.simply-scroll-list {
-  overflow: hidden;
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-
-/* Custom class modifications - adds to / overrides above
-
-.simply-scroll is default base class */
-/* Container DIV */
-.simply-scroll {
-  width: 100%;
-  height: 200px;
-  margin-bottom: 1em; }
-
-/* Clip DIV */
-.simply-scroll .simply-scroll-clip {
-  width: 100%;
-  height: 200px; }
-
-#instafeed {
-  /**
-	 * More Details: http://nicolasgallagher.com/micro-clearfix-hack/
-	 */
-  /**
-	 * For IE 6/7 only
-	 * Include this rule to trigger hasLayout and contain floats.
-	 */
-  *zoom: 1;
-  /**
-	 * For modern browsers
-	 * 1. The space content is one way to avoid an Opera bug when the
-	 *    contenteditable attribute is included anywhere else in the document.
-	 *    Otherwise it causes space to appear at the top and bottom of elements
-	 *    that are clearfixed.
-	 * 2. The use of `table` rather than `block` is only necessary if using
-	 *    `:before` to contain the top-margins of child elements.
-	 */ }
-  #instafeed ::before, #instafeed ::after {
-    content: " ";
-    /* 1 */
-    display: table;
-    /* 2 */ }
-  #instafeed ::after {
-    clear: both; }
-  #instafeed a {
-    display: block;
-    float: left;
-    width: 200px;
-    height: 200px;
-    background-size: cover;
-    margin-right: 20px;
-    border-radius: 10px; }
-
-/**
  * Layout
  */
 main {
@@ -574,7 +507,16 @@ section.about, section.contact {
     -webkit-transform: rotate(-4deg); } }
 
 section.about {
-  padding: 20px; }
+  padding: 1em;
+  /**
+	 * Apply to containers to get nice gutters between vertical items
+	 *
+	 * More Details: https://www.youtube.com/watch?v=w4skJXB03Ho&noredirect=1
+	 */ }
+  section.about > * {
+    margin: 0; }
+  section.about > * + * {
+    margin-top: 1em; }
   section.about .photo {
     margin: 10px auto;
     width: 80%;
@@ -595,3 +537,123 @@ section.about {
       height: 30vh;
       min-height: 150px;
       width: 100%; }
+  section.about .content {
+    font: 14pt "Nothing You Could Do"; }
+
+section.contact {
+  padding: 1em;
+  /**
+	 * Apply to containers to get nice gutters between vertical items
+	 *
+	 * More Details: https://www.youtube.com/watch?v=w4skJXB03Ho&noredirect=1
+	 */ }
+  section.contact > * {
+    margin: 0; }
+  section.contact > * + * {
+    margin-top: 1em; }
+
+.azpixels {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: rgba(255, 255, 255, 0.37);
+  text-decoration: none; }
+
+.contact-type {
+  color: rgba(255, 255, 255, 0.62);
+  position: relative;
+  display: block;
+  overflow: hidden;
+  text-decoration: none; }
+  .contact-type > i {
+    float: left;
+    font-size: 30pt;
+    color: rgba(27, 11, 6, 0.33);
+    text-align: center;
+    width: 60px;
+    -webkit-transform: translateX(-3px);
+        -ms-transform: translateX(-3px);
+            transform: translateX(-3px);
+    transition: all 1s; }
+  .contact-type > span {
+    display: block;
+    margin-left: 70px;
+    padding-top: 4px;
+    font: 20pt "Nothing You Could Do";
+    height: 45px;
+    transition: all 1s;
+    -webkit-transform: translateX(5px);
+        -ms-transform: translateX(5px);
+            transform: translateX(5px); }
+  .contact-type:hover > i {
+    -webkit-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+            transform: translateX(0px); }
+  .contact-type:hover > span {
+    -webkit-transform: translateX(0px);
+        -ms-transform: translateX(0px);
+            transform: translateX(0px); }
+
+.simply-scroll-container {
+  position: relative; }
+
+/* Clip DIV - automatically generated */
+.simply-scroll-clip {
+  position: relative;
+  overflow: hidden; }
+
+/* UL/OL/DIV - the element that simplyScroll is inited on
+Class name automatically added to element */
+.simply-scroll-list {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+/* Custom class modifications - adds to / overrides above
+
+.simply-scroll is default base class */
+/* Container DIV */
+.simply-scroll {
+  width: 100%;
+  height: 200px;
+  margin-bottom: 1em; }
+
+/* Clip DIV */
+.simply-scroll .simply-scroll-clip {
+  width: 100%;
+  height: 200px; }
+
+#instafeed {
+  /**
+	 * More Details: http://nicolasgallagher.com/micro-clearfix-hack/
+	 */
+  /**
+	 * For IE 6/7 only
+	 * Include this rule to trigger hasLayout and contain floats.
+	 */
+  *zoom: 1;
+  /**
+	 * For modern browsers
+	 * 1. The space content is one way to avoid an Opera bug when the
+	 *    contenteditable attribute is included anywhere else in the document.
+	 *    Otherwise it causes space to appear at the top and bottom of elements
+	 *    that are clearfixed.
+	 * 2. The use of `table` rather than `block` is only necessary if using
+	 *    `:before` to contain the top-margins of child elements.
+	 */ }
+  #instafeed ::before, #instafeed ::after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */ }
+  #instafeed ::after {
+    clear: both; }
+  #instafeed a {
+    display: block;
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-size: cover;
+    margin-right: 20px;
+    border-radius: 10px; }

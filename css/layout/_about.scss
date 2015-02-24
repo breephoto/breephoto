@@ -5,7 +5,8 @@
 }
 
 section.about {
-	padding: 20px;
+	padding: $common-gutter;
+	@include vertical-gutters($common-gutter);
 
 	.photo {
 		margin: 10px auto;
@@ -29,6 +30,10 @@ section.about {
 			min-height: 150px;
 			width: 100%;
 		}
+	}
+
+	.content {
+		font: 14pt "Nothing You Could Do";
 	}
 
 

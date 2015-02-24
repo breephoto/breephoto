@@ -9,7 +9,6 @@
 @import "utils/mixins/buttons";
 @import "utils/mixins/layout";
 
-
 /**
  * Base
  */
@@ -20,12 +19,6 @@
 // Defaults
 @import "base/defaults";
 
-
-/**
- * Components
- */
-@import "components/gallery";
-
 /**
  * Layout
  */
@@ -33,3 +26,5 @@
 @import "layout/main";
 @import "layout/sections";
 @import "layout/about";
+@import "layout/contact";
+@import "layout/gallery";
