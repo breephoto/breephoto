@@ -71,5 +71,9 @@ $(function() {
     $('main').addClass('show-photos');
     reset();
   });
+
+  var email = 'breephoto' + '@' + 'yahoo.com';
+  $('contact-type.email').attr('href', 'mailto:' + email);
+  $('contact-type.email .title').text(email);
   
 });
