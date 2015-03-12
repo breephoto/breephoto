@@ -73,7 +73,7 @@ $(function() {
   });
 
   var email = 'breephoto' + '@' + 'yahoo.com';
-  $('contact-type.email').attr('href', 'mailto:' + email);
-  $('contact-type.email .title').text(email);
+  $('.contact-type.email').attr('href', 'mailto:' + email);
+  $('.contact-type.email .title').text(email);
   
 });
