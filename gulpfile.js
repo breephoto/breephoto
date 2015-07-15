@@ -4,6 +4,16 @@ var prefix = require('gulp-autoprefixer');
 var concat = require("gulp-concat");
 var uglify = require("gulp-uglify");
 var rename = require("gulp-rename");
+var connect = require('connect');
+var serveStatic = require('serve-static');
+
+/**
+ * Server
+ */
+gulp.task('server', function() {
+    connect().use(serveStatic(__dirname)).listen(8080);
+    console.log('Connect on localhost:8080');
+});
 
 // Sass
 gulp.task('sass', function () {
@@ -35,4 +45,4 @@ gulp.task('watch', function() {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['sass', 'js', 'watch']);
+gulp.task('default', ['sass', 'js', 'server', 'watch']);

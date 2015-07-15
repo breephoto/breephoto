@@ -5,11 +5,12 @@ $(function() {
     userId: 346969893,
     accessToken: '346969893.5a10ffa.66a80f9eb7fa4f03b3841e5e0bffd923',
     resolution: 'low_resolution',
-    // sortBy: 'most-recent',
+    sortBy: 'most-recent',
     template: '<a href="{{link}}" style="background-image: url({{image}})"></a>',
-    filter: function(image) {
-      return image.tags.indexOf('website') >= 0;
-    },
+    limit: 60,
+    // filter: function(image) {
+    //   //return image.tags.indexOf('website') >= 0;
+    // },
     after: function() {
      
       $("#instafeed").simplyScroll({
@@ -38,6 +39,7 @@ $(function() {
     reset();
   });
 
+  // Some obscurity
   var email = 'breephoto' + '@' + 'yahoo.com';
   $('.contact-type.email').attr('href', 'mailto:' + email);
   $('.contact-type.email .title').text(email);
