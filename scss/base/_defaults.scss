@@ -1,0 +1,51 @@
+// ****************************************
+//   Inherited Syles
+// ****************************************
+
+// See this explanation for details
+// https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+
+html {
+    box-sizing: border-box;
+    color: $default-text-color;
+    font: $default-font-size $default-font-family;
+    font-weight: $default-font-weight;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+    color: inherit;
+    font: inherit;
+}
+
+
+/****************************************
+  Body
+*****************************************/
+
+body {
+	min-height: 100%;
+	background-color: #000;
+}
+
+/****************************************
+  Buttons
+*****************************************/
+
+button {
+	@include button;
+	border: 1px solid $line-color;
+	background-color: rgba(0, 0, 0, 0.15);
+	border-radius: 50px;
+	letter-spacing: 10px;
+	font-size: 20pt;
+	padding: 10px 20px;
+
+	&:hover {
+		border-color: #fff;
+	}
+
+	&:active {
+		background-color: rgba(255, 255, 255, 0.15);
+	}
+}

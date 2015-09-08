@@ -29,15 +29,22 @@ $(function() {
     $('body').attr('data-page', '');
   }
 
+  // Switching the "Pages" attribute on the body element
   $('main nav button').on('click', function() {
     var page = $(this).data('page');
     if (page) $('body').attr('data-page', page);
   });
 
+  // When show photos is clicked
   $('button.photos').on('click', function() {
     $('main').addClass('show-photos');
     reset();
   });
+
+  $('.content a.read-more').on('click', function(e) {
+      e.preventDefault();
+      $('body').addClass('expand-about');
+  })
 
   // Some obscurity
   var email = 'breephoto' + '@' + 'yahoo.com';

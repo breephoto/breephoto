@@ -17,8 +17,8 @@ gulp.task('server', function() {
 
 // Sass
 gulp.task('sass', function () {
-  gulp.src('./css/styles.scss')
-    .pipe(sass())
+  gulp.src('./scss/main.scss')
+    .pipe(sass().on('error', sass.logError))
     .pipe(prefix("last 1 version", "> 1%", "ie 8", "ie 7"))
     .pipe(gulp.dest('./css'));
 });
@@ -40,7 +40,7 @@ gulp.task('js', function() {
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
-  gulp.watch(['./css/**/*.scss'], ['sass']);
+  gulp.watch(['./scss/**/*.scss'], ['sass']);
   gulp.watch(['./js/main.js'], ['js']);
 });
 
